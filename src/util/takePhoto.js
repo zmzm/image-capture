@@ -1,8 +1,8 @@
 import { image, photoLink, setAttrs } from './dom';
 
 const defaultSettings = {
-  imageHeight: 480,
-  imageWidth: 640,
+  imageHeight: 720,
+  imageWidth: 1280,
 };
 
 async function takePhoto({ settings = defaultSettings, imageCapture }) {
