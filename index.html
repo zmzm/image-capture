@@ -2,41 +2,35 @@
   <link rel="stylesheet" href="styles/main.css" />
  </head>
  <body>
-  <!-- индикатор загрузки -->
   <div class="lds-ripple"><div></div><div></div></div>
-  <!-- приложение -->
-  <div id="app">
-    <div>
-      <!-- контейнер для потока -->
-      <video autoplay muted></video>
-      <!-- результат -->
-      <div class="result">
-        <!-- контейнер для фото -->
-        <img />
-        <!-- ссылка для скачивания фото -->
-        <a class="photo-link">Download</a>
-        <!-- контейнер для фрейма -->
-        <canvas width="0" height="0"></canvas>
-        <!-- ссылка для скачивания фрейма -->
-        <a class="canvas-link">Download</a>
+  <div class="content">
+    <div class="application-name">
+      <span>Image</span>
+      <span>capture</span>
+      <div class="sub-header">
+        <span>Small and useless application</span>
+        <span>which allows you to take a photo from webcam.</span>
       </div>
     </div>
-    <!-- настройки -->
-    <form class="settings">
-      <!-- кнопки для -->
-      <div class="controls">
-        <!-- получения снимка -->
-        <button class="take-photo">Take photo</button>
-        <!-- удаления снимка -->
-        <button class="remove-photo" type="button">Remove photo</button>
-        <!-- получения фрейма -->
-        <button class="grab-frame" type="button">Grab frame</button>
-        <!-- очистки холста -->
-        <button class="clear-canvas" type="button">Clear canvas</button>
+    <div id="app">
+      <div class="video-block">
+        <video autoplay muted></video>
       </div>
-    </form>
+    </div>
   </div>
-  <!-- скрипты -->
-  <!-- основной модуль -->
+  <form class="settings">
+    <div class="controls">
+      <button class="take-photo">Take photo</button>
+      <button class="remove-photo" type="button">Remove photo</button>
+      <button class="grab-frame" type="button">Grab frame</button>
+      <button class="clear-canvas" type="button">Clear canvas</button>
+    </div>
+  </form>
+  <div class="result">
+    <img />
+    <button class="photo-link">Download photo</button>
+    <canvas width="0" height="0"></canvas>
+    <a class="canvas-link">Download</a>
+  </div>
   <script type="module" src="src/main.js"></script>
  </body>

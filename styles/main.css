@@ -9,7 +9,6 @@
  box-sizing: border-box;
  font-family: 'Monserrat', sans-serif;
  font-size: 1rem;
- color: #292b2c;
 }
 
 :root {
@@ -21,7 +20,8 @@
 
  color-scheme: light dark;
  color: rgba(255, 255, 255, 0.87);
- background-color: #242424;
+ background: rgb(29,29,138);
+ background: linear-gradient(214deg, rgba(29,29,138,1) 0%, rgba(0,212,255,1) 100%);
 
  font-synthesis: none;
  text-rendering: optimizeLegibility;
@@ -30,25 +30,24 @@
  -webkit-text-size-adjust: 100%;
 }
 
-body {
- display: flex;
- justify-content: center;
-}
-
 #app {
  padding: 1rem;
  display: none;
+ flex-direction: column;
+ align-items: center;
+ margin-top: 4em;
 }
 
 video,
 img,
 canvas {
- max-width: 320px;
+ max-width: 400px;
  border-radius: 4px;
+ box-shadow: 0 0 0 1px rgb(53 72 91 / 14%), 0 3px 2px rgb(0 0 0 / 4%), 0 7px 5px rgb(0 0 0 / 2%), 0 13px 10px rgb(0 0 0 / 2%), 0 22px 17px rgb(0 0 0 / 2%);
 }
 
 .settings {
- padding: 0 1rem;
+  margin-top: 2em;
 }
 
 .field {
@@ -61,38 +60,39 @@ canvas {
 }
 
 .controls {
- margin-bottom: 1rem;
  display: flex;
 }
 
 button {
- padding: 0.3rem 0.5rem;
- background: var(--primary);
- border: none;
- border-radius: 4px;
- outline: none;
- color: #f7f7f7;
- font-size: 0.88rem;
- box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
- transition: 0.3s;
- cursor: pointer;
- user-select: none;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  padding: 0.6em 1.2em;
+  font-size: 1.2em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  background-color: transparent;
+  height: 47px;
 }
 
-button:active {
- box-shadow: none;
+button:not(:last-of-type) {
+  margin-right: 5px;
 }
 
-button[disabled] {
- filter: grayscale(50);
- opacity: 0.8;
- cursor: not-allowed;
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .result {
  display: flex;
  flex-direction: column;
  align-items: center;
+ margin-top: 4em;
+}
+
+.result img {
+  margin-bottom: 2em;
 }
 
 a {
@@ -105,4 +105,50 @@ a {
 a[href] {
  color: var(--primary);
  border-bottom: 1px dashed var(--primary);
+}
+
+form {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.application-name {
+  font-size: 6em;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: 0.1em;
+  font-weight: bold;
+  width: 7em;
+  margin-top: 1em;
+}
+
+.application-name span {
+  font-size: inherit;
+  line-height: 1em;
+}
+
+.sub-header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  font-size: 0.25em;
+}
+
+.sub-header span {
+  font-size: inherit;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.2em;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-link {
+  display: none;
 }
