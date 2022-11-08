@@ -35,7 +35,7 @@ export const removeAttrs = (element, attrs) => {
 };
 
 // DOM-элементы
-export const loader = getElement('.lds-ripple');
+export const loaderContainer = getElement('.loader-container');
 export const app = getElement('#app');
 export const video = getElement('video');
 export const image = getElement('.result img');

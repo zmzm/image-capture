@@ -152,3 +152,10 @@ form {
 .photo-link {
   display: none;
 }
+
+.loader-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(30,144,255,0.8);
+}

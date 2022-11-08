@@ -1,4 +1,4 @@
-import { app, loader, video } from './dom';
+import { app, loaderContainer, video } from './dom';
 
 const getDefaultConstraints = {
   video: {
@@ -15,7 +15,7 @@ async function getMedia(constraints = getDefaultConstraints) {
     const videoTrack = stream.getVideoTracks()[0];
     const imageCapture = new ImageCapture(videoTrack);
 
-    loader.style.display = 'none';
+    loaderContainer.style.display = 'none';
     app.style.display = 'flex';
 
     return { imageCapture, videoTrack };
